@@ -1,0 +1,6 @@
+curl --request PUT \
+  --url http://localhost:3000/users/2 \
+  --header 'content-type: application/json' \
+  --data '{
+	"name": "jonathan"
+}'
