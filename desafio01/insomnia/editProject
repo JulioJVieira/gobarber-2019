@@ -1,0 +1,6 @@
+curl --request PUT \
+  --url http://localhost:3000/projects/2 \
+  --header 'content-type: application/json' \
+  --data '{
+	"title": "Projeto alterado"
+}'

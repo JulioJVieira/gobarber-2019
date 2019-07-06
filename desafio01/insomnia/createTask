@@ -1,0 +1,6 @@
+curl --request POST \
+  --url http://localhost:3000/projects/2/tasks \
+  --header 'content-type: application/json' \
+  --data '{
+	"title": "Nova tarefa2"
+}'
