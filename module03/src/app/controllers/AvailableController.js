@@ -8,7 +8,7 @@ import {
   isAfter,
 } from 'date-fns';
 import { Op } from 'sequelize';
-import { scheduled } from 'rxjs';
+
 import Appointment from '../models/Appointment';
 
 class AvailableController {
