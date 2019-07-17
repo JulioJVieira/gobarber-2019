@@ -43,6 +43,7 @@ class TechList extends Component {
             />
           )
         }
+        <TechItem />
       </ul>
         <input 
           type="text" 
