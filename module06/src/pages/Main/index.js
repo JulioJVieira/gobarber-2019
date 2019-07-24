@@ -4,6 +4,7 @@ import { Keyboard, ActivityIndicator } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import api from '../../services/api';
+
 import {
   Container,
   Form,
@@ -82,24 +83,24 @@ export default class Main extends Component {
 
   render() {
     const { users, newUser, loading } = this.state;
+
     return (
       <Container>
         <Form>
           <Input
             autoCorrect={false}
-            autoCaptalize="none"
+            autoCapitalize="none"
             placeholder="Adicionar usuário"
             value={newUser}
             onChangeText={text => this.setState({ newUser: text })}
             returnKeyType="send"
             onSubmitEditing={this.handleAddUser}
           />
-
           <SubmitButton loading={loading} onPress={this.handleAddUser}>
             {loading ? (
               <ActivityIndicator color="#FFF" />
             ) : (
-              <Icon name="add" color="#FFF" />
+              <Icon name="add" size={20} color="#FFF" />
             )}
           </SubmitButton>
         </Form>
@@ -114,7 +115,7 @@ export default class Main extends Component {
               <Bio>{item.bio}</Bio>
 
               <ProfileButton onPress={() => this.handleNavigate(item)}>
-                <ProfileButtonText>Ver Perfil</ProfileButtonText>
+                <ProfileButtonText>Ver perfil</ProfileButtonText>
               </ProfileButton>
             </User>
           )}
